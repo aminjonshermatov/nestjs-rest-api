@@ -13,5 +13,5 @@ jobs:
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
           login-server: docker.pkg.github.com
-            username: aminjonshermatov
-            password: ${{ secrets.GITHUB_TOKEN }}
+          username: aminjonshermatov
+          password: ${{ secrets.GITHUB_TOKEN }}
