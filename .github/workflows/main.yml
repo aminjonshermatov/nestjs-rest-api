@@ -1,4 +1,4 @@
-name: Publish docker
+name: Publish Docker
 
 on:
   push:
@@ -9,11 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Publish to registry
+      - name: Publish to registy
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          registry: https://ghcr.io
-          name:     https://ghcr.io/aminjonshermatov/nestjs-rest-api/top-api
+          registry: docker.pkg.github.com
+          name: docker.pkg.github.com/aminjonshermatov/nestjs-rest-api/top-api
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          tags:     "develop"
+          tags: "develop"
